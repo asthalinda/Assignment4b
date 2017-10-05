@@ -1,0 +1,42 @@
+#include<iostream>
+
+using namespace std;
+
+
+ int sumofoddeven(int s,int t);
+
+
+int main()
+
+{
+
+	int s,t;
+
+	cout<<"enter lower limit";
+
+	cin>>s;
+
+	cout<<"enter uper limit";
+
+	cin>>t;
+
+	cout<<"sum of odd or even number"<<sumofoddeven(s,t);
+ 
+	return 0;
+
+}
+
+
+int sumofoddeven(int s,int t)
+
+{
+
+	if(s<=t)
+
+	return s+sumofoddeven(s+2,t);
+
+        else
+ 
+	return 0;
+
+}

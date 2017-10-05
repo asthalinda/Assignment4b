@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int sumofdigits(int num);
+
+int main() 
+{
+	int num,s=0;
+	cout<<"enter a number";
+	cin>>num;
+	s=sumofdigits(num);
+	cout<<"sum of the digits is "<<s;
+	return 0;
+}
+int r,s=0;
+int sumofdigits(int num)
+{ 
+   if(num!=0)
+   {
+     r=num%10;
+     s=s+r;
+     sumofdigits(num/10);
+   }
+   return s;
+}

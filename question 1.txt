@@ -1,0 +1,45 @@
+#include <iostream>
+
+#include<cmath>
+
+ 
+using namespace std;
+
+ 
+int Power(int b, int e);
+
+ 
+int main()
+{
+
+    int b, e, counter, result = 1;
+
+    cout << "Enter base and exponent";
+ 
+   cin >> b >> e;
+
+      
+    result = Power(b, e);
+
+      
+    cout << b << "^" << e << " = " << result;
+
+    return 0;
+
+}
+
+int Power(int b, int e) 
+
+{
+
+    if(e == 0)
+{
+        
+    return 1;
+
+    }
+
+else 
+   return b * Power(b, e - 1);
+
+}

@@ -1,0 +1,47 @@
+#include<iostream>
+
+using namespace std;
+
+
+int reverse(int num);
+
+
+int main()
+
+{
+
+	int num,rev;
+
+	cout<<"enter a number";
+
+	cin>>num;
+
+	rev=reverse(num);
+
+	cout<<"reverse of number"<<num<<"is"<<rev<<endl;
+
+	return 0;
+
+}
+
+int rev=0,r;
+
+int reverse(int num)
+
+{
+
+	if (num!=0)
+
+	{
+
+		r=num%10;
+
+		rev=(rev*10)+r;
+
+		reverse(num/10);
+
+	}
+	
+      return rev;
+
+}
